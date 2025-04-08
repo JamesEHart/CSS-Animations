@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 
 function App() {
@@ -13,7 +12,7 @@ function App() {
     const shuffleInterval = setInterval(() => {
       const scrambled = targetText
         .split('')
-        .map((char, i) => {
+        .map((_char, i) => {
           if (i < Math.floor(iterations)) return targetText[i];
           return chars.charAt(Math.floor(Math.random() * chars.length));
         })
